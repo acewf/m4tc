@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'HelveticaNeueLTStd73BoldExtended';
+    src: url('helveticaneueltstd-bdex.eot');
+    src: url('helveticaneueltstd-bdex.eot') format('embedded-opentype'),
+         url('helveticaneueltstd-bdex.woff') format('woff'),
+         url('helveticaneueltstd-bdex.ttf') format('truetype'),
+         url('helveticaneueltstd-bdex.svg#HelveticaNeueLTStd73BoldExtended') format('svg');
+}

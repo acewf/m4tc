@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'HelveticaNeueLTStd25UltraLight';
+    src: url('helveticaneueltstd-ultlt.eot');
+    src: url('helveticaneueltstd-ultlt.eot') format('embedded-opentype'),
+         url('helveticaneueltstd-ultlt.woff') format('woff'),
+         url('helveticaneueltstd-ultlt.ttf') format('truetype'),
+         url('helveticaneueltstd-ultlt.svg#HelveticaNeueLTStd25UltraLight') format('svg');
+}

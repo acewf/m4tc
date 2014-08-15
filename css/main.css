@@ -1,0 +1,901 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: arial;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* Definir comportamento default de alguns elementos */
+
+body{
+    background-image: url('../img/background.jpg');
+}
+div{
+    display: inline-block;
+    box-sizing: border-box;
+}
+li {
+    display: inline-block;
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: #000;
+}
+li a:hover {
+    color: #ccc;
+}
+
+#wrapper-app {
+    position: relative;
+    max-width: 900px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 8px rgba(255, 255, 255, 0.10);
+    border-radius: 15px;
+    font-family: arial;
+    padding-bottom: 15px;
+}
+#wrapper-app > #header{
+    position: relative;
+    display: block;
+    top: 20px;
+    margin: 20px;
+    height: 172px;
+}
+#wrapper-app > #header > #m4tc_logo{
+    width: 155px;
+    height: 100px;
+    background-image: url('../img/logo_m4tc.png');
+}
+#wrapper-app > #header >.group{
+    position: absolute;
+    top: 20px;
+    right: 0px;   
+}
+#wrapper-app > #header >.group > a {
+    display: inline-block;
+}
+#wrapper-app > #header >.group > a > .fb_logo{
+    background-image: url('../img/facebook_logo.png');
+    width: 17px;
+    height: 17px;
+}
+#wrapper-app > #header >.group > div#langchoose{
+    width: 55px;
+    height: 17px;
+    position: relative;
+    border: 1px solid;
+    border-color: #dcdcdc;
+    border-radius: 3px;
+    padding: 2px;
+    padding-left: 5px;
+    background-image: url('../img/dropdown.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 34px;
+    z-index: 2;
+    background-color: #fff;
+}
+#wrapper-app > #header >.group > div#backlangchoose{
+    width: 55px;
+    height: 10px;
+    position: absolute;
+    border: 1px solid;
+    border-color: #dcdcdc;
+    border-radius: 3px;
+    padding: 2px;
+    padding-left: 5px;
+    top: 0px;
+    left: 21px;
+    display: none;
+}
+#wrapper-app > #header >.group > div#langchoose > div{
+    width: 0px;
+    overflow: hidden;
+}
+
+#wrapper-app > #header >.group > div#langchoose > div[value="pt"]{
+    background-image: url('../img/pt_flag.jpg');
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-size: 16px 11px;
+    font-size: .6em;
+    position: absolute;
+}
+#wrapper-app > #header >.group > div#langchoose > div[value="es"]{
+    background-image: url('../img/es_flag.jpg');
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    background-size: 16px 11px;
+    font-size: .6em;
+    position: absolute;
+    display: none;
+
+}
+#wrapper-app > #header >.group > div#langchoose .show_option{
+    width: 39px;
+    top: 18px;
+}
+
+
+#wrapper-app > #header > #menu{
+    display: inline-block;
+    right: 0px;
+    bottom: 20px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 310px;
+    text-align: center;
+    height: 35px;
+    border: 1px solid;
+    border-color: #dcdcdc;
+    border-radius: 3px;
+    font-family: arial;
+    font-size: 13px;
+    background: -webkit-linear-gradient(rgba(255,255,255,.1), rgba(0,0,0,.1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(255,255,255,.1), rgba(0,0,0,.1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(255,255,255,.1), rgba(0,0,0,.1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(255,255,255,.1), rgba(0,0,0,.1)); /* Standard syntax */
+}
+
+#wrapper-app > #header > #menu a{
+    color: #555555;
+}
+
+#wrapper-app > #header > #menu > li{
+    width: 80px;
+    margin-top: 8px;
+    padding-left: 15px;
+    background-position-x: 10px;
+    height: 24px;
+}
+#wrapper-app > #header > #menu > li.idea{
+    background-image: url('../img/idea_ico.png');
+    background-size: 24px 22px;
+    background-repeat: no-repeat;
+}
+#wrapper-app > #header > #menu > li.submenu{
+    background-image: url('../img/submenu_ico.png');
+    background-size: 24px 22px;
+    background-position-x: 10px;
+    background-repeat: no-repeat;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding-left: 20px;
+}
+#wrapper-app > #header > #menu > li.heart{
+    background-image: url('../img/heart_ico.png');
+    background-size: 24px 22px;
+    background-repeat: no-repeat;
+}
+
+
+#wrapper-app > #header > ul#menu > li > ul {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    padding: 0;
+    margin: 0;
+    width: 185px;
+    height: 130px;
+    background-image: url("../img/padrao.jpg");
+    left: 65px;
+    top: 40px;
+    border: 1px solid;
+    border-color: #dcdcdc;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 3px rgba(2, 2, 2, 0.33);
+    color: #fff;
+}
+#wrapper-app > #header > ul#menu > li > ul > li:last-child{
+    background:none;
+}
+#wrapper-app > #header > ul#menu > li > ul > li {
+    margin: 7px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    background-image: url('../img/linedivide.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 23px;
+    width: 150px;
+    height: 21px;
+    
+}
+#wrapper-app > #header > ul#menu > li > ul > li a{
+    color: #fff;
+    text-shadow: 1px 1px rgba(10, 10, 10, 0.83);
+}
+
+#wrapper-app > #slideshow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../img/padrao.jpg");
+}
+#wrapper-app > #slideshow > #esquerda{
+    position: absolute;
+    background-image: url("../img/arrow_page.png");
+    background-size:13px 21px;
+    background-repeat: no-repeat;
+    background-position: 20px 36px; 
+    top: 50%;
+    margin-top: -45px;
+    
+}
+#wrapper-app > #slideshow > #direita{
+    position: absolute; 
+    background-image: url("../img/arrow_page.png");
+    background-size:13px 21px;
+    background-repeat: no-repeat;
+    background-position: 20px 36px; 
+    top: 50%;
+    margin-top: -45px;
+    right: 0px;
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    transform: rotate(180deg);
+}
+#wrapper-app > #slideshow > .btpage{
+    width: 55px;
+    height: 90px;
+    background-color: #fff;
+    z-index: 20;
+}
+#wrapper-app > #slideshow > ul#home_slideshow{
+    display: inline-block;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    color: #ffffff;
+    font-family: "HelveticaNeueLTStd25UltraLight";
+    -webkit-font-smoothing: antialiased !important;
+    width: 100%;
+}
+#wrapper-app > #slideshow > ul#home_slideshow > li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+}
+#wrapper-app > #slideshow > ul#home_slideshow > li:first-child{
+    left: 0;
+}
+
+#wrapper-app > #slideshow > ul#home_slideshow > li > .title{
+    font-size: 50px;
+    margin-top: 150px;
+    margin-left: 65px;
+    display: block;
+}
+#wrapper-app > #slideshow > ul#home_slideshow > li > .subtext{
+    font-size: 12px;
+    width: 420px;
+    margin-left: 65px;
+    display: block;
+    font-family: arial;
+    font-weight: normal;
+}
+
+#wrapper-app > #slideshow > ul#home_slideshow > li[data-img="first"] {
+    background-image: url("../img/normal/slide1.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+#wrapper-app > #slideshow > ul#home_slideshow > li[data-img="second"] {
+    background-image: url("../img/normal/slide2.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+#wrapper-app > #slideshow > ul.pageindex{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+#wrapper-app > #slideshow > ul.pageindex > li{
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+    background-color: none;
+    margin-right: 5px;
+}
+#wrapper-app > #slideshow > ul.pageindex > li.selected{
+    background-color: #454a4f;
+}
+
+#wrapper-app > #pagecontent{
+    background-image: url("../img/padrao.jpg");
+    margin-top: -5px;
+    color: #363636;
+    padding-bottom: 30px;
+}
+
+#wrapper-app > #pagecontent > #leftbox{
+    width: 56%;
+    padding: 30px;
+}
+#wrapper-app > #pagecontent > #leftbox > .title{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 15px;
+}
+#wrapper-app > #pagecontent > #leftbox > .text{
+    font-family: arial;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#wrapper-app > #pagecontent > #leftbox > ul{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+#wrapper-app > #pagecontent > #leftbox > ul >li{
+    padding-left: 30px;
+    background-size: 25px 26px;
+    background-position: 0px 8px;
+    background-repeat: no-repeat;
+}
+#wrapper-app > #pagecontent > #leftbox > ul >li.pacman{
+    background-image: url("../img/pacman_ico.png");
+   
+}
+#wrapper-app > #pagecontent > #leftbox > ul >li.broken{
+    background-image: url("../img/broken_ico.png");
+}
+#wrapper-app > #pagecontent > #leftbox > ul >li.bones{
+    background-image: url("../img/bones_ico.png");
+}
+#wrapper-app > #pagecontent > #leftbox > ul >li > div.title{
+    font-weight: bold;
+    font-size: 14px;
+}
+#wrapper-app > #pagecontent > #leftbox > ul >li > div.descpt{
+    font-weight: normal;
+    font-size: 12px;
+}
+#wrapper-app > #pagecontent > #rigthtbox{
+    width: 44%;
+    position: absolute;
+    padding: 30px;
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform{
+    border: 1px solid;
+    border-color: #dcdcdc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    color: #636363;
+    height: 335px;
+    position: relative;
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > div{
+    display: block;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform .small_text{
+    font-size: 8px;
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > input{
+    display: block;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    width: 295px;
+    outline: 0 none !important;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    color: rgb(136,136,136);
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #636363;
+    border-width: 1px;
+    padding: 0px;
+    height: 25px;
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > div.title{
+    margin: 15px;
+    font-size: 20px;
+}
+
+
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > div#dateselector{
+    margin-bottom: 10px;
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > div#dateselector > select{
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #636363;
+    border-width: 1px;
+    height: 26px;
+    min-width: 56px;
+    /*
+    appearance:none;
+    -moz-appearance:none;  Firefox 
+    -webkit-appearance:none;
+    */
+}
+
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > button{
+    border-style: none;
+    border-radius: 30px;
+    border-color: #636363;
+    color: #ffffff;
+    font-size: 24px;
+    right: 30px;
+    position: absolute;
+    background: -webkit-linear-gradient( #0bacea,#179dd1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #0bacea,#179dd1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( #0bacea,#179dd1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #0bacea,#179dd1); /* Standard syntax */
+    background-image: url("../img/continue_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 132px 11px;
+    background-color: #0bacea;
+    width: 150px;
+    height: 35px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > div#wish{
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > div#wish > input[type="checkbox"]+label{
+    padding: 5px 0 4px 24px;
+    cursor: pointer;
+    background: url(../img/checkbox_empty.png) left center no-repeat;
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > div#wish > input[type="checkbox"]{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+#wrapper-app > #pagecontent > #rigthtbox > #smallform > div#wish > input[type="checkbox"]:checked+label{
+    background: url(../img/checkbox_active.png) left center no-repeat;
+}
+#wrapper-app > #footer{
+    width: 100%;
+    background: rgba(226,226,226,1);
+    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(246,246,246,1) 32%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(32%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(246,246,246,1) 32%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(246,246,246,1) 32%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(246,246,246,1) 32%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(246,246,246,1) 32%, rgba(255,255,255,1) 100%);
+    margin-top: 1px;
+}
+
+
+#wrapper-app > #footer > #facebookcontain{
+    margin: 30px;
+    height: 150px;
+    overflow: hidden;
+}
+
+#wrapper-app > #footer > #newsletter{
+    vertical-align: top;
+    margin: 30px;
+}
+#wrapper-app > #footer > #newsletter > form{
+    position: relative;
+}
+
+#wrapper-app > #footer > #newsletter > form > div{
+    background-image: url("../img/mail_ico.png");
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#wrapper-app > #footer > #newsletter > form > input{
+    display: block;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    width: 295px;
+    outline: 0 none !important;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    color: rgb(136,136,136);
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #636363;
+    border-width: 1px;
+    padding: 0px;
+    height: 25px;
+    padding-left: 5px;
+    
+}
+#wrapper-app > #footer > #newsletter > form > .addnews{
+    background-image: url("../img/arrow_news.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 17px;
+    bottom: -10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media all and (min-width: 600px) {
+    #wrapper-app > #slideshow > ul#home_slideshow{
+        height: 402px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    body{
+        background-image: none;
+    }
+    #wrapper-app {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        background-color: #fff;
+        font-family: arial;
+        border-radius:0px;
+        top: 0px;
+        padding-bottom: 15px;
+    }
+
+
+    #wrapper-app > #slideshow > ul#home_slideshow > li[data-img="first"] {
+        background-image: url("../img/light/slide1.jpg");
+        
+    }
+    #wrapper-app > #slideshow > ul#home_slideshow > li{
+        position: absolute;
+    }
+    #wrapper-app > #slideshow > ul#home_slideshow{
+        height: 262px;
+    }
+    #wrapper-app > #pagecontent > #leftbox{
+        display: block;
+        width: 100%;
+        padding: 30px;
+    }
+
+    #wrapper-app > #slideshow > ul#home_slideshow > li > .title {
+        margin-top: 80px;
+    }
+
+    #wrapper-app > #pagecontent {
+        background-image: url("../img/padrao.jpg");
+        margin-top: -5px;
+        color: #363636;
+        padding-bottom: 10px;
+    }
+
+    #wrapper-app > #footer > #newsletter {
+        vertical-align: top;
+        margin: 30px;
+        display: block;
+    }
+    #wrapper-app > #footer > #newsletter > form > input {
+        display: block;
+        margin-right: 15px;
+        margin-bottom: 5px;
+        width:100%;
+    }
+    #wrapper-app > #footer {
+        position: relative;
+    }
+    #wrapper-app > #footer > #facebookcontain {
+        position: absolute;
+        top: 75px;
+    }
+
+    #wrapper-app > #pagecontent > #rigthtbox > #smallform > button {
+        right: 50%;
+        margin-right: -75px;
+        margin-top: 20px;
+    }
+    #wrapper-app > #pagecontent > #rigthtbox > #smallform > input {
+        width: 90%;
+    }
+    #wrapper-app > #pagecontent > #rigthtbox{
+        display: block;
+        width: 100%;
+        position: relative;
+        padding: 30px;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
